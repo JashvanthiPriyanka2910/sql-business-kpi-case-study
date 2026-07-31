@@ -1,71 +1,107 @@
 # SQL Business KPI Case Study
 
-A portfolio project focused on using SQL to assess data quality, define business KPIs, answer stakeholder questions, and communicate executive-level insights.
+A complete SQL portfolio project that uses a fictional retail-style dataset to demonstrate relational data modeling, data-quality validation, KPI analysis, and executive-level business communication.
 
-> **Project status:** In progress. The repository is being built in clear stages so that every query, metric, and conclusion is reproducible.
+## Project Overview
 
-## Project Goals
+The project was built in SQLite and analyzes customer, product, order, and order-item data. All names, emails, transactions, and amounts are synthetic and were created only for portfolio use.
 
-- Build a clean relational data model
-- Perform data-quality checks before analysis
-- Use SQL joins, CTEs, subqueries, and window functions
-- Define practical business KPIs
-- Answer documented stakeholder questions
-- Summarize findings in business language
+The analysis focuses on:
 
-## Planned Analysis Areas
-
-- Revenue and order trends
-- Customer behavior and retention
-- Product and category performance
+- Revenue and profitability
+- Monthly performance trends
+- Product-category performance
 - Regional performance
 - Average order value
-- Repeat purchase behavior
-- Data completeness and consistency
+- Repeat-customer behavior
+- Data completeness and referential integrity
 
-## Planned Repository Structure
+## KPI Snapshot
+
+| KPI | Result |
+|---|---:|
+| Completed orders | 17 |
+| Active customers | 12 |
+| Total net revenue | $7,622.33 |
+| Average order value | $448.37 |
+| Gross profit | $3,090.33 |
+| Gross margin | 40.54% |
+| Contribution profit | $2,845.33 |
+| Repeat-customer rate | 41.67% |
+
+## Key Findings
+
+- Technology was the strongest category, generating $3,948.04 in net revenue.
+- August was the highest-revenue month, with $2,455.18 in net revenue.
+- The East region produced the highest revenue and average order value.
+- The South region had the lowest average order value, suggesting a potential cross-selling opportunity.
+- Five of twelve customers with completed orders were repeat customers.
+- Monthly gross margins remained positive throughout the analysis period.
+
+## Repository Structure
 
 ```text
 sql-business-kpi-case-study/
 ├── README.md
-├── data/
-│   └── README.md
 ├── sql/
 │   ├── 01_schema.sql
-│   ├── 02_data_quality.sql
-│   └── 03_kpi_analysis.sql
-├── reports/
-│   └── executive_summary.md
-└── docs/
-    └── images/
+│   ├── 02_seed_data.sql
+│   ├── 03_data_quality.sql
+│   └── 04_kpi_analysis.sql
+└── reports/
+    └── executive_summary.md
 ```
 
-## Tools
+## SQL Skills Demonstrated
 
-- SQL
-- PostgreSQL or SQLite
-- Power BI or Excel for optional visualization
-- GitHub for version control and documentation
+- Relational schema design
+- Primary and foreign keys
+- Index creation
+- Data validation
+- Joins
+- Common table expressions
+- Aggregations
+- Conditional logic
+- Date-based analysis
+- Profit and margin calculations
+- Business KPI development
 
-## Project Workflow
+## Run Order
 
-1. Select a public or synthetic business dataset
-2. Document the source and important fields
-3. Create the relational schema
-4. Load and validate the data
-5. Run data-quality checks
-6. Define KPI calculations
-7. Answer business questions with SQL
-8. Summarize findings and limitations
-9. Add dashboard screenshots if applicable
+Run the files in this order using SQLite:
 
-## Data Source
+1. `sql/01_schema.sql`
+2. `sql/02_seed_data.sql`
+3. `sql/03_data_quality.sql`
+4. `sql/04_kpi_analysis.sql`
 
-A public or synthetic business dataset will be selected and documented before analysis begins.
+The data-quality file is designed to return `PASS` when no issues are found.
+
+## Executive Summary
+
+Detailed KPI tables, findings, recommendations, limitations, and reproducibility notes are available in:
+
+[`reports/executive_summary.md`](reports/executive_summary.md)
+
+## Business Recommendations
+
+- Prioritize high-performing Technology products while monitoring margin.
+- Study the East region's customer and order mix to understand its higher order value.
+- Test bundles and cross-selling strategies in the South region.
+- Create a repeat-purchase campaign for one-time customers.
+- Track the main KPIs in a recurring business-intelligence dashboard.
+
+## Limitations
+
+- The dataset is small and synthetic.
+- Results are illustrative and are not intended for forecasting.
+- Returned and cancelled orders are excluded from primary revenue KPIs.
+- The analysis covers July through December 2025.
+- Operating expenses beyond product and shipping costs are not included.
 
 ## Responsible Use
 
-This project will not include employer-confidential data, customer information, internal company systems, or personally identifiable information.
+This repository contains no employer-confidential information, customer records, internal systems data, or real personally identifiable information.
 
 ## Author
 
